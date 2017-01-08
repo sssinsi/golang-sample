@@ -20,5 +20,5 @@ func reverse(s []int) {
 	var s []int
 	s = nil
 	s = []int(nil)
-	s = []int{}
+	s = []int{}]
 }
