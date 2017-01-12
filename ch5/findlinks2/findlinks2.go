@@ -55,7 +55,7 @@ func visit(links []string, n *html.Node) []string {
 
 //COuntWordsAndImagesはHTMLドキュメントに対するHTTP GET リクエストをurlへ行い
 //そのドキュメント内に含まれる単語と画像の数を返します
-func COuntWordsANdImages(url string) (words, images int, err error) {
+func CountWordsANdImages(url string) (words, images int, err error) {
 	resp, err := http.Get(url)
 	if err != nil {
 		return
