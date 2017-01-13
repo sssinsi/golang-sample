@@ -26,8 +26,8 @@ func main() {
 		fmt.Printf("parsing %s as HTML: %s", url, err)
 		os.Exit(1)
 	}
-	fmt.Print(doc)
-	//forEachNode(doc, startElement, endElement)
+	// fmt.Print(doc)
+	forEachNode(doc, startElement, endElement)
 }
 
 // forEachNodeはnから始まるツリー内のここのノードxに対して
@@ -40,7 +40,7 @@ func forEachNode(n *html.Node, pre, post func(n *html.Node)) {
 	}
 
 	for c := n.FirstChild; c != nil; c = c.NextSibling {
-		forEachNode(n, pre, post)
+		forEachNode(c, pre, post)
 	}
 
 	if post != nil {
